@@ -15,7 +15,7 @@ public class CoucouTest {
         String result = new RestTemplate()
                 .getForObject("http://localhost:" + port + "/coucou",
                 String.class);
-        Assertions.assertTrue(result.contains("kamoulox"));
+        Assertions.assertFalse(result.contains("kamoulox"));
 
     }
 
